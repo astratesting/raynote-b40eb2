@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --raynote-black: #0A0A0A;
+  --flame-orange: #FF5722;
+  --vivid-magenta: #D500F9;
+  --acid-green: #76FF03;
+}
+
+body {
+  background-color: var(--raynote-black);
+  color: #ffffff;
+}
+
+@layer utilities {
+  .text-gradient {
+    background: linear-gradient(135deg, var(--flame-orange), var(--vivid-magenta), var(--acid-green));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .prism-bg {
+    background: linear-gradient(135deg, var(--flame-orange) 0%, var(--vivid-magenta) 50%, var(--acid-green) 100%);
+  }
+
+  .glass-effect {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('https://fonts.cdnfonts.com/css/satoshi') format('woff2');
+  font-weight: 400 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Archivo Black';
+  src: url('https://fonts.cdnfonts.com/css/archivo-black') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+}
